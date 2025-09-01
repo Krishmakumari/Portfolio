@@ -81,7 +81,7 @@ const About = () => {
                 <div>
                     <p className='grid-headtext'>My passion for coding</p>
                     <p className='grid-subtext'>"I thrive on solving complex problems and turning ideas into reality through code.
-                         For me, coding isn't just a skill—it's a creative outlet that fuels my curiosity and drive."
+                         For me, coding isn’t just a skill—it’s a creative outlet that fuels my curiosity and drive."
                     </p>
                     </div>
                 </div>

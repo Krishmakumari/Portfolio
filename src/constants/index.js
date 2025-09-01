@@ -23,6 +23,45 @@ export const navLinks = [
   
   
   export const myProjects = [
+    
+    {
+  title: 'AI Interview Platform',
+  desc: 'An AI-powered mock interview platform that helps candidates practice technical and behavioral interviews. It provides real-time feedback, question difficulty adjustment, and performance tracking.',
+  subdesc:
+    'Built with Next.js 14, TailWind CSS, Vapi, and OpenAI APIs, the platform delivers an interactive interview simulation experience, helping users improve confidence and skills before real interviews.',
+  href: 'https://prep-wise-rose.vercel.app/', 
+  texture: '/textures/project/project4.mp4',
+  logo: '/assets/logo.svg',
+  logoStyle: {
+    backgroundColor: '#0B1E2D',
+    border: '0.2px solid #133A54',
+    boxShadow: '0px 0px 60px 0px #1E6F8B4D',
+  },
+  spotlight: '/assets/spotlight4.png',
+  tags: [
+    {
+      id: 1,
+      name: 'React.js',
+      path: '/assets/react.svg',
+    },
+    {
+      id: 2,
+      name: 'TailwindCSS',
+      path: '/assets/tailwindcss.png',
+    },
+    // {
+    //   id: 3,
+    //   name: 'Node.js',
+    //   path: '/assets/node.png',
+    // },
+    // {
+    //   id: 4,
+    //   name: 'OpenAI API',
+    //   path: '/assets/openai.png',
+    // },
+  ],
+},
+
     {
       title: 'Weather Wave -  Weather App',
       desc: 'Weatherly is a modern weather application that provides real-time weather updates, forecasts, and climate insights. Built for accuracy and efficiency, it delivers precise weather conditions for any location worldwide.',
@@ -84,7 +123,7 @@ export const navLinks = [
       subdesc:
         'Built using React.js, Node.js, Express, MongoDB, Note.me offers a seamless experience with features like markdown support, cloud storage, and secure access.',
       href: 'https://github.com/Krishmakumari/Note.me',
-      // texture: '/textures/project/project3.mp4',
+      texture: '/textures/project/project3.mp4',
       logo: '/assets/project-logo3.png',
       logoStyle: {
         backgroundColor: '#60f5a1',
@@ -102,43 +141,6 @@ export const navLinks = [
         }
       ],
     },
-    // {
-    //   title: 'Horizon - Online Banking Platform',
-    //   desc: 'Horizon is a comprehensive online banking platform that offers users a centralized finance management dashboard. It allows users to connect multiple bank accounts, monitor real-time transactions, and seamlessly transfer money to other users.',
-    //   subdesc:
-    //     'Built with Next.js 14 Appwrite, Dwolla and Plaid, Horizon ensures a smooth and secure banking experience, tailored to meet the needs of modern consumers.',
-    //   href: 'https://www.youtube.com/watch?v=PuOVqP_cjkE',
-    //   texture: '/textures/project/project4.mp4',
-    //   logo: '/assets/project-logo4.png',
-    //   logoStyle: {
-    //     backgroundColor: '#0E1F38',
-    //     border: '0.2px solid #0E2D58',
-    //     boxShadow: '0px 0px 60px 0px #2F67B64D',
-    //   },
-    //   spotlight: '/assets/spotlight4.png',
-    //   tags: [
-    //     {
-    //       id: 1,
-    //       name: 'React.js',
-    //       path: '/assets/react.svg',
-    //     },
-    //     {
-    //       id: 2,
-    //       name: 'TailwindCSS',
-    //       path: 'assets/tailwindcss.png',
-    //     },
-    //     {
-    //       id: 3,
-    //       name: 'TypeScript',
-    //       path: '/assets/typescript.png',
-    //     },
-    //     {
-    //       id: 4,
-    //       name: 'Framer Motion',
-    //       path: '/assets/framer.png',
-    //     },
-    //   ],
-    // },
     
   ];
   

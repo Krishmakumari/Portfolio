@@ -5,6 +5,7 @@ Files: hacker-room-new.glb [34.62MB] > /Users/hsuwinlat/Desktop/jsm pj/threejscc
 */
 
 import { useGLTF, useTexture } from '@react-three/drei';
+import { useMemo } from 'react';
 
 const  HackerRoom=(props)=> {
   const { nodes, materials } = useGLTF('/models/hacker-room.glb');
@@ -12,15 +13,20 @@ const  HackerRoom=(props)=> {
   const monitortxt = useTexture('textures/desk/monitor.png');
   const screenTxt = useTexture('textures/desk/screen.png');
 
+  const memoizedMaterials = useMemo(() => ({
+    screenMaterial: <meshMatcapMaterial map={screenTxt} />,
+    monitorMaterial: <meshMatcapMaterial map={monitortxt} />
+  }), [screenTxt, monitortxt]);
+
   return (
     <group {...props} dispose={null}>
       <mesh geometry={nodes.screen_screens_0.geometry} material={materials.screens}>
-        <meshMatcapMaterial map={screenTxt} />
+        {memoizedMaterials.screenMaterial}
       </mesh>
       <mesh geometry={nodes.screen_glass_glass_0.geometry} material={materials.glass} />
       <mesh geometry={nodes.table_table_mat_0_1.geometry} material={materials.table_mat} />
       <mesh geometry={nodes.table_table_mat_0_2.geometry} material={materials.computer_mat}>
-        <meshMatcapMaterial map={monitortxt} />
+        {memoizedMaterials.monitorMaterial}
       </mesh>
       <mesh geometry={nodes.table_table_mat_0_3.geometry} material={materials.server_mat} />
       <mesh geometry={nodes.table_table_mat_0_4.geometry} material={materials.vhsPlayer_mat} />
@@ -28,7 +34,7 @@ const  HackerRoom=(props)=> {
       <mesh geometry={nodes.table_table_mat_0_6.geometry} material={materials.mat_mat} />
       <mesh geometry={nodes.table_table_mat_0_7.geometry} material={materials.arm_mat} />
       <mesh geometry={nodes.table_table_mat_0_8.geometry} material={materials.tv_mat}>
-        <meshMatcapMaterial map={monitortxt} />
+        {memoizedMaterials.monitorMaterial}
       </mesh>
       <mesh geometry={nodes.table_table_mat_0_9.geometry} material={materials.cables_mat} />
       <mesh geometry={nodes.table_table_mat_0_10.geometry} material={materials.props_mat} />
