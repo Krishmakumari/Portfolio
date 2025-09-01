@@ -76,9 +76,11 @@ const About = () => {
                         <p className='grid-headtext'>Remote & Ready </p>
                         <p className='grid-subtext'> Based in India, I'm open to remote opportunities, eager to collaborate,
                              and always learning to build impactful projects.</p>
-                             <div className='w-fit' onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
-                        <Button name="Contact Me" isBeam containerClass="w-full mt-10" />
-                        </div>
+                             <div className='w-full flex justify-center mt-10'>
+                                <div className='cursor-pointer' onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
+                                    <Button name="Contact Me" isBeam containerClass="" />
+                                </div>
+                             </div>
                     </div>
                 </div>
             </div>
