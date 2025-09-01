@@ -13,7 +13,15 @@ const About = () => {
         setTimeout(() => {
             setHasCopied(false);
         },2000)
+    }
 
+    const handleDownload = () => {
+        const link = document.createElement('a');
+        link.href = '/general.pdf';
+        link.download = 'Krishma_Resume.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
     }
 
   return (
@@ -95,7 +103,7 @@ const About = () => {
             {/* Download Resume Section */}
             <p className='grid-subtext text-center'>Download Resume</p>
             <div className='copy-container'>
-                <a href="/resume.pdf" download="My_Resume.pdf">
+                <a href="/general.pdf" download="Krishma_Resume.pdf" target="_blank" rel="noopener noreferrer">
                     <button className="lg:text-2xl md:text-xl font-medium text-gray_gradient text-white border-2 border-white px-4 py-2 rounded-lg hover:bg-white hover:text-black transition">
                         Download
                     </button>
