@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Globe from 'react-globe.gl'
 import Button from '../components/Button'
+import { scroller } from 'react-scroll'
 
 const About = () => {
 
@@ -77,8 +78,13 @@ const About = () => {
                         <p className='grid-subtext'> Based in India, I'm open to remote opportunities, eager to collaborate,
                              and always learning to build impactful projects.</p>
                              <div className='w-full flex justify-center mt-10'>
-                                <div className='cursor-pointer' onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
-                                    <Button name="Contact Me" isBeam containerClass="" />
+                                <div className="w-fit">
+                                    <Button name="Contact Me" isBeam containerClass="" 
+                                    onClick={() => scroller.scrollTo('contact', {
+                                      smooth: true,
+                                      duration: 500,
+                                      offset: -70
+                                    })}/>
                                 </div>
                              </div>
                     </div>

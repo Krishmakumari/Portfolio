@@ -8,7 +8,6 @@ import Contact from './sections/Contact'
 import Footer from './sections/Footer'
 import './index.css';
 
-
 const App = () => {
   return (
     <main className='max-w-7xl mx-auto'>

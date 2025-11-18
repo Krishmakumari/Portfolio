@@ -16,9 +16,19 @@ body {
 }
 
 @layer utilities {
-  @variants responsive {
+  .c-space {
+    @apply sm:px-10 px-5;
+  }
+  
+  @media (max-width: 640px) {
     .c-space {
-      @apply sm:px-10 px-5;
+      @apply px-5;
+    }
+  }
+  
+  @media (min-width: 640px) {
+    .c-space {
+      @apply px-10;
     }
   }
 
